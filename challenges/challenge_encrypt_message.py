@@ -1,10 +1,11 @@
 def encrypt_message(message: str, key: int):
+
     if not isinstance(key, int):
         raise TypeError("tipo inválido para key")
-
+    
     if not isinstance(message, str):
         raise TypeError("tipo inválido para message")
-
+    
     if key not in range(1, len(message)):
         return "".join(reversed(message))
 
